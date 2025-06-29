@@ -1,0 +1,45 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep extendedglob nomatch notify
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/lima/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# System aliases
+
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias fd='fdfind'
+alias cd="zd"
+
+zd() {
+  if [ $# -eq 0 ]; then
+    builtin cd ~ && return
+  elif [ -d "$1" ]; then
+    builtin cd "$1"
+  else
+    z "$@" && printf " \U000F17A9 " && pwd || echo "Error: Directory not found"
+  fi
+}
+
+open() {
+  xdg-open "$@" >/dev/null 2>&1
+}
+
+# Starship
+
+eval "$(starship init zsh)"
+
+# Mise-en-place
+
+eval "$(mise activate zsh)"
