@@ -1,6 +1,7 @@
 Initial configs from [Omarchy](https://omarchy.org) with some personal customizations:
 
 - Kept only Nord theme
+- Replaced bash with zsh + starship
 - Replaced alacritty with kitty
 - Replaced swaybg with hyprpaper
 - Added on/off toggle for wofi (prevent opening multiple instances)
