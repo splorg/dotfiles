@@ -16,6 +16,7 @@ Initial configs from [Omarchy](https://omarchy.org) with some personal customiza
 yay -S stow
 
 git clone https://github.com/splorg/dotfiles
+cd dotfiles/arch
 stow -t ~/. --dotfiles .
 ```
 
