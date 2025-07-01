@@ -21,3 +21,7 @@ stow -t ~/. --dotfiles .
 ```
 
 *You may need to log off and back in or reboot for changes to make effect
+
+### Wallpaper
+
+To change wallpaper, edit `dot-config/hypr/hyprpaper.conf` and swap the file path to match the path of the image you want
