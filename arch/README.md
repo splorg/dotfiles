@@ -9,11 +9,14 @@ Initial configs from [Omarchy](https://omarchy.org) with some personal customiza
 - Removed most default apps
 - Customized some keybinds
 
+### Usage
+
 ```
 # install GNU stow
 yay -S stow
 
-cd /tmp && git clone https://github.com/splorg/dotfiles
-cp -r dotfiles/arch ~/arch && cd ~/arch
-stow --dotfiles .
+git clone https://github.com/splorg/dotfiles
+stow -t ~/. --dotfiles .
 ```
+
+*You may need to log off and back in or reboot for changes to make effect
