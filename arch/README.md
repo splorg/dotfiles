@@ -13,7 +13,7 @@ Initial configs from [Omarchy](https://omarchy.org) with some personal customiza
 
 ```
 # install GNU stow
-yay -S stow
+paru -S stow
 
 git clone https://github.com/splorg/dotfiles
 cd dotfiles/arch
