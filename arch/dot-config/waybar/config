@@ -54,9 +54,8 @@
     "on-click": "kitty -e btop"
   },
   "clock": {
-    "format": "{:%A %H:%M}",
-    "format-alt": "{:%d %B %Y}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format": "{:%A, %d %B, %R}",
+    "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "months",
       "mode-mon-col": 3,
