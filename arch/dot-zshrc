@@ -36,6 +36,9 @@ open() {
   xdg-open "$@" >/dev/null 2>&1
 }
 
+# Add .local/bin to PATH
+export PATH="$HOME/.local/bin:$PATH"
+
 # Starship
 
 eval "$(starship init zsh)"
