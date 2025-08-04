@@ -36,6 +36,10 @@ open() {
   xdg-open "$@" >/dev/null 2>&1
 }
 
+run() {
+  setsid "$@" < /dev/null > /dev/null 2>&1
+}
+
 # Add .local/bin to PATH
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -64,3 +68,6 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="$PATH:/usr/bin/android-studio/bin"
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+export DEFAULT_EMULATOR="Pixel_9"
+alias emulator="QT_QPA_PLATFORM=xcb run emulator @$DEFAULT_EMULATOR"
